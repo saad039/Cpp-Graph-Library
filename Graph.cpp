@@ -831,7 +831,7 @@ bool Graph::saveGraph(std::string outputFileName) {
   char specialChar = '%';
   char separator = '^';
   output.open (outputFileName+".txt");
-  output << std::fixed; //Prevents scientific-notation
+  output << std::defaultfloat; //Prevents scientific-notation
 
   //Write Header, includes directed bool
   if (directed) { output << specialChar << "PERSISTANT GRAPH: DIRECTED (Do not edit this line)" << std::endl; }
